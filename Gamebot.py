@@ -3,19 +3,12 @@ import asyncio
 import random
 import openpyxl
 from discord import Member
-from discord.ext import commands
 import youtube_dl
-from urllib.request import urlopen, Request
-import urllib
-import urllib.request
 import bs4
 import os
 import sys
 import json
 from selenium import webdriver
-import time
-import datetime
-import ffmpeg
 import random
 
 app = discord.Client()
@@ -40,14 +33,6 @@ async def on_message(message):
         embed = discord.Embed(title="명령어 목록", description="명령어 목록입니닷!", colour = discord.Colour.blue())
     
         #embed.set_footer(text = "추가명령어는 토끼린에게 문의바람")
-        dtime = datetime.datetime.now()
-        #print(dtime[0:4]) # 년도
-        #print(dtime[5:7]) #월
-        #print(dtime[8:11])#일
-        #print(dtime[11:13])#시
-        #print(dtime[14:16])#분
-        #print(dtime[17:19])#초
-        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.hour)+"시 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
         embed.add_field(name='`마재', value='평소의 겜맨입니다.', inline=False)
         embed.add_field(name='`고양이', value='고양이 사진이 나옵니다..', inline=False)
         embed.add_field(name='`강아지', value='강아지 사진이 나옵니다.', inline=False)
