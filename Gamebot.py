@@ -39,7 +39,7 @@ async def on_message(message):
         embed.add_field(name='`네코', value='2D 고양이 이미지가 나옵니다', inline=False)
         embed.add_field(name='`나머지는', value='시험끝나고 내일 한다.', inline=False)
 
-    if message.content.startswith('^고양이'):
+    if message.content.startswith('`고양이'):
         embed = discord.Embed(
             title='고양이는',
             description='멍멍',
@@ -52,7 +52,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await app.send_message(message.channel, embed=embed)
 
-    if message.content.startswith('^강아지'):
+    if message.content.startswith('`강아지'):
         embed = discord.Embed(
             title='강아지는',
             description='야옹야옹',
@@ -65,7 +65,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await app.send_message(message.channel, embed=embed)
         
-        if message.content.startswith('^네코'):
+    if message.content.startswith('^네코'):
         embed = discord.Embed(
             colour=discord.Colour.green()
         )
